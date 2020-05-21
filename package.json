@@ -2,14 +2,21 @@
   "name": "myfirsttypescript",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/index.js",
-    "build": "tsc"
+    "start": "rm -rf ./dist && concurrently -k \"npm:build-watch\" \"npm:serve\"",
+    "serve": "npx live-server --watch=./dist --entry-file=./index.html",
+    "build-watch": "webpack --watch",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^3.8.3"
+    "concurrently": "^5.2.0",
+    "live-server": "^1.2.1",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
   }
 }

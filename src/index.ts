@@ -5,6 +5,6 @@ if (myButton == null) {
     
     myButton.onclick = function () {
         if(myButton == undefined) return;
-        alert(myButton.value);
+        alert("Hello World!");
     }
 }
