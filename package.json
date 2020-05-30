@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "concurrently -k \"npm:build-watch\" \"npm:serve\"",
-    "serve": "npx live-server --watch=./dist --entry-file=./index.html",
+    "serve": "npx live-server --watch=\"./dist\",\"index.html\" --entry-file=./index.html",
     "build-watch": "webpack --watch",
     "build": "webpack"
   },
