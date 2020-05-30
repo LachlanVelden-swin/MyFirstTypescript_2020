@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "rm -rf ./dist && concurrently -k \"npm:build-watch\" \"npm:serve\"",
+    "start": "concurrently -k \"npm:build-watch\" \"npm:serve\"",
     "serve": "npx live-server --watch=./dist --entry-file=./index.html",
     "build-watch": "webpack --watch",
     "build": "webpack"
